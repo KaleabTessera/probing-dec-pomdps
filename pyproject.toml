@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dec-pomdp-diagnostics"
+version = "0.1.0"
+description = "Information-theoretic diagnostics for cooperative MARL Dec-POMDPs (Tessera et al., AAMAS 2026)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Kale-ab Abebe Tessera", email = "kaleabtessera@gmail.com" }
+]
+keywords = [
+    "multi-agent reinforcement learning",
+    "Dec-POMDP",
+    "cooperative MARL",
+    "mutual information",
+    "diagnostics",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.2",
+    "pandas>=2.0",
+    "joblib>=1.3",
+    "rliable>=1.0",
+]
+
+[project.optional-dependencies]
+collect = ["wandb>=0.16"]
+dev = [
+    "pytest>=7",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2602.20804"
+Repository = "https://github.com/KaleabTessera/probing-dec-pomdps"
+Website = "https://www.kaleabtessera.com/probing"
+
+[project.scripts]
+dec-pomdp-metrics = "dec_pomdp_diagnostics.cli:compute_metrics_main"
+dec-pomdp-collect = "dec_pomdp_diagnostics.cli:collect_main"
+
+[tool.setuptools.packages.find]
+include = ["dec_pomdp_diagnostics*"]
+exclude = ["data*", "tests*"]

@@ -1,0 +1,31 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Environment
+.env
+.venv/
+venv/
+
+# Local data and outputs (project-specific — don't commit multi-GB pickles/CSVs)
+*.pkl
+*.zip
+*_metrics*.csv
+*_summary.csv
+*_table.tex
+data_v5/
+
+# Logs from joblib / wandb
+wandb/
+*.out
+*.err
