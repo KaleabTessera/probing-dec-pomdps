@@ -2,16 +2,19 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2602.20804"><img alt="Paper" src="https://img.shields.io/badge/Paper-arXiv%3A2602.20804-b31b1b" /></a>
-  <a href="https://www.kaleabtessera.com/probing"><img alt="Website" src="https://img.shields.io/badge/Project-Website-0f766e" /></a>
+  <a href="https://aamas-conference.org/2026"><img alt="AAMAS Oral" src="https://img.shields.io/badge/Accepted%20as-Oral%20%40%20AAMAS%202026-ff69b4" /></a>
+  <a href="https://pypi.org/project/dec-pomdp-diagnostics/"><img alt="PyPI" src="https://img.shields.io/pypi/v/dec-pomdp-diagnostics.svg" /></a>
+  <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue" /></a>
+   <a href="https://www.kaleabtessera.com/probing"><img alt="Website" src="https://img.shields.io/badge/Project-Website-0f766e" />
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-2563eb" /></a>
 </p>
+
 <p align="center">
   <img src="hero.svg" alt="Pipeline: train policies, collect rollouts, compute probes, audit behaviours" width="100%" />
 </p>
 
 
-
-Metrics introduced in [Probing Dec-POMDP Reasoning in Cooperative MARL](https://arxiv.org/abs/2602.20804) (Oral, AAMAS 2026).
+Metrics introduced in [Probing Dec-POMDP Reasoning in Cooperative MARL](https://arxiv.org/abs/2602.20804) (**Oral, AAMAS 2026**).
 
 This repository provides information-theoretic diagnostics for cooperative MARL trajectories. Given trained-policy rollouts, the package computes five probes, compares them against permutation nulls, and helps audit what behaviours are induced under the policy distribution rather than relying only on return.
 
