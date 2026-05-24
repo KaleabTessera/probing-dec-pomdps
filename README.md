@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="hero.svg" alt="Pipeline: train policies, collect rollouts, compute probes, audit behaviours" width="100%" />
+  <img src="probing.gif" alt="Pipeline: train policies, collect rollouts, compute probes, audit behaviours" width="100%" />
 </p>
 
 
@@ -25,32 +25,6 @@ Use it when you want to ask:
 - Is coordination mostly synchronous action coupling, or is there temporal influence across agents?
 
 Quick links: [Installation](#installation) | [Quickstart](#quickstart) | [CLI](#cli-reference) | [Citation](#citation)
-
-## The five diagnostics
-
-For agent $i$ at time $t$, let $O_t^i$ denote the local observation, $A_t^i$ the action, $H_t^i$ the history representation, and $\tau_{t-1}^i$ the action-observation history up to $t-1$. For recurrent policies, $H_t^i$ is the RNN hidden state. For feed-forward policies, history is approximated using a length-$k$ window, such as $O_{t-k:t-1}^i$ or $(O_{t-k:t-1}^i, A_{t-k:t-1}^i)$, depending on the diagnostic.
-
-All diagnostics measure predictive statistical dependence under the rollout distribution, not causal influence and not worst-case/best-case properties of the environment. They should be interpreted together with the memory-reactive performance gap, permutation-null baselines, bootstrap uncertainty, and behavioural evaluations.
-
-| Diagnostic | Definition | If high, suggests… | Implementation |
-|---|---|---|---|
-| **OAR** | $I(O_t^i; A_t^i)$ | The current observation is highly predictive of the agent’s action. This is consistent with more **reactive behaviour**, especially when **HAR** is low. | `compute_oar` |
-| **HAR** | $I(H_t^i; A_t^i \mid O_t^i)$ | The agent’s action depends on history beyond the current observation. This indicates **history-dependent behaviour**, but not necessarily performance-critical memory use ($\Delta_{\mathrm{Mem}}$ can help with that). | `compute_har_hidden` (RNN), `compute_har_ohist` (FF) |
-| **PIF** | $I(\tau_{t-1}^i, O_t^i; A_t^j \mid \tau_{t-1}^j, O_t^j)$ | Agent $i$'s trajectory and current observation contain additional predictive information about agent $j$'s action beyond $j$'s own history and observation. This is consistent with **cross-agent information asymmetry**, where one agent’s information helps predict another agent’s behaviour.| `compute_pif_hidden` (RNN), `compute_pif_oa_hist` (FF) |
-| **AA**  | $I(A_t^i; A_t^j \mid O_t^i, O_t^j)$ | Residual same-timestep action dependence remains after conditioning on both agents’ current observations. This is consistent with **instantaneous conventions**, **symmetry breaking**, or shared unobserved drivers. | `compute_aa` |
-| **DAI** | $T^{-1}\sum_t I(\tau_{t-1}^i; A_t^j \mid \tau_{t-1}^j)$ | Agent $i$'s past provides additional predictive information about agent $j$'s future action beyond $j$'s own past. This is consistent with **temporally directed dependence**. | `compute_dai_hidden` (RNN), `compute_dai_oa_hist` (FF) |
-
-Each diagnostic also has a normalised form in $[0, 1]$, obtained by dividing by the relevant action entropy or residual action entropy:
-
-- **OAR**: divided by $H(A_t^i)$.
-- **HAR**: divided by $H(A_t^i \mid O_t^i)$.
-- **PIF**: divided by $H(A_t^j \mid \tau_{t-1}^j, O_t^j)$.
-- **AA**: divided by $H(A_t^j \mid O_t^i, O_t^j)$.
-- **DAI**: divided by $T^{-1}\sum_t H(A_t^j \mid \tau_{t-1}^j)$.
-
-We also compute a permutation-null baseline for each diagnostic. The action sequence is shuffled within each agent, preserving marginal action statistics while destroying temporal and cross-agent dependencies. A diagnostic is treated as **above-null** only when its value on the original trajectories exceeds the mean over null replicates. This helps account for finite-sample bias and noise in MI estimators.
-
-The **memory-reactive performance gap** $\Delta_{\mathrm{Mem}} = J(\pi_{\mathrm{RNN}}) - J(\pi_{\mathrm{FF}})$ is computed from training-time evaluation returns rather than trajectory data, so it lives outside this package.
 
 ## Installation
 
@@ -93,6 +67,7 @@ Expected array shapes:
 import numpy as np
 import dec_pomdp_diagnostics as dpd
 
+# get data
 rng = np.random.default_rng(0)
 # N = total steps, T = timesteps per episode
 N, obs_dim, T = 1200, 8, 24
@@ -107,7 +82,7 @@ Sd = {"agent_0": obs0, "agent_1": obs1}
 Td = {"agent_0": ts, "agent_1": ts}
 Ed = {"agent_0": eps, "agent_1": eps}
 
-# OAR: raw action arrays from rollouts.
+# OAR: compute specific metrics
 Ad = {"agent_0": act0, "agent_1": act1}
 oar, oar_norm = dpd.compute_oar(Sd, Ad)
 print(oar_norm)
@@ -118,6 +93,7 @@ pif, pif_norm, _ = dpd.compute_pif_oa_hist(Sd, Ad, Td, Ed, k_window=3)
 aa, aa_norm, _ = dpd.compute_aa(Sd, Ad, Td, Ed)
 dai, dai_norm, _ = dpd.compute_dai_oa_hist(Sd, Ad, Td, Ed, k_window=3)
 
+# get all metrics
 result = dpd.compute_diagnostics(
      dpd.UserData(
          observations={"agent_0": obs0, "agent_1": obs1},
@@ -152,6 +128,34 @@ gap = dpd.memory_reactive_gap(rnn_returns=[...], ff_returns=[...])
 Pass `memory_gap_flags={env_name: gap['benefits_from_memory']}` to
 `build_paper_table` to combine it with the HAR-uses-history check, matching
 Decision Rule 1 exactly.
+
+## The five diagnostics
+
+For agent $i$ at time $t$, let $O_t^i$ denote the local observation, $A_t^i$ the action, $H_t^i$ the history representation, and $\tau_{t-1}^i$ the action-observation history up to $t-1$. For recurrent policies, $H_t^i$ is the RNN hidden state. For feed-forward policies, history is approximated using a length-$k$ window, such as $O_{t-k:t-1}^i$ or $(O_{t-k:t-1}^i, A_{t-k:t-1}^i)$, depending on the diagnostic.
+
+All diagnostics measure predictive statistical dependence under the rollout distribution, not causal influence and not worst-case/best-case properties of the environment. They should be interpreted together with the memory-reactive performance gap, permutation-null baselines, bootstrap uncertainty, and behavioural evaluations.
+
+| Diagnostic | Definition | If high, suggests… | Implementation |
+|---|---|---|---|
+| **OAR** | $I(O_t^i; A_t^i)$ | The current observation is highly predictive of the agent’s action. This is consistent with more **reactive behaviour**, especially when **HAR** is low. | `compute_oar` |
+| **HAR** | $I(H_t^i; A_t^i \mid O_t^i)$ | The agent’s action depends on history beyond the current observation. This indicates **history-dependent behaviour**, but not necessarily performance-critical memory use ($\Delta_{\mathrm{Mem}}$ can help with that). | `compute_har_hidden` (RNN), `compute_har_ohist` (FF) |
+| **PIF** | $I(\tau_{t-1}^i, O_t^i; A_t^j \mid \tau_{t-1}^j, O_t^j)$ | Agent $i$'s trajectory and current observation contain additional predictive information about agent $j$'s action beyond $j$'s own history and observation. This is consistent with **cross-agent information asymmetry**, where one agent’s information helps predict another agent’s behaviour.| `compute_pif_hidden` (RNN), `compute_pif_oa_hist` (FF) |
+| **AA**  | $I(A_t^i; A_t^j \mid O_t^i, O_t^j)$ | Residual same-timestep action dependence remains after conditioning on both agents’ current observations. This is consistent with **instantaneous conventions**, **symmetry breaking**, or shared unobserved drivers. | `compute_aa` |
+| **DAI** | $T^{-1}\sum_t I(\tau_{t-1}^i; A_t^j \mid \tau_{t-1}^j)$ | Agent $i$'s past provides additional predictive information about agent $j$'s future action beyond $j$'s own past. This is consistent with **temporally directed dependence**. | `compute_dai_hidden` (RNN), `compute_dai_oa_hist` (FF) |
+
+Each diagnostic also has a normalised form in $[0, 1]$, obtained by dividing by the relevant action entropy or residual action entropy:
+
+- **OAR**: divided by $H(A_t^i)$.
+- **HAR**: divided by $H(A_t^i \mid O_t^i)$.
+- **PIF**: divided by $H(A_t^j \mid \tau_{t-1}^j, O_t^j)$.
+- **AA**: divided by $H(A_t^j \mid O_t^i, O_t^j)$.
+- **DAI**: divided by $T^{-1}\sum_t H(A_t^j \mid \tau_{t-1}^j)$.
+
+We also compute a permutation-null baseline for each diagnostic. The action sequence is shuffled within each agent, preserving marginal action statistics while destroying temporal and cross-agent dependencies. A diagnostic is treated as **above-null** only when its value on the original trajectories exceeds the mean over null replicates. This helps account for finite-sample bias and noise in MI estimators.
+
+The **memory-reactive performance gap** $\Delta_{\mathrm{Mem}} = J(\pi_{\mathrm{RNN}}) - J(\pi_{\mathrm{FF}})$ is computed from training-time evaluation returns rather than trajectory data, so it lives outside this package.
+
+
 
 ### What `compute_diagnostics` does for you
 
