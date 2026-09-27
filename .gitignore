@@ -29,3 +29,8 @@ data_v5/
 wandb/
 *.out
 *.err
+
+# Baseline training, rollouts and local checks
+outputs/
+.pytest_cache/
+.ruff_cache/

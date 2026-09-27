@@ -1,0 +1,1690 @@
+[
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_reference_v3",
+      "LR=0.0001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_mpe-01"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_reference_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_mpe-02"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_reference_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_mpe-03"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_reference_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_mpe-04"
+  },
+  {
+    "algorithm": "ippo_ff_nps_het",
+    "config": "ippo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_speaker_listener_v4",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_mpe-05"
+  },
+  {
+    "algorithm": "ippo_rnn_nps_het",
+    "config": "ippo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_speaker_listener_v4",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_mpe-06"
+  },
+  {
+    "algorithm": "mappo_ff_nps_het",
+    "config": "mappo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_speaker_listener_v4",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_mpe-07"
+  },
+  {
+    "algorithm": "mappo_rnn_nps_het",
+    "config": "mappo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_speaker_listener_v4",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_mpe-08"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_spread_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_mpe-09"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_spread_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_mpe-10"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_spread_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_mpe-11"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_spread_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_mpe-12"
+  },
+  {
+    "algorithm": "ippo_ff_nps_het",
+    "config": "ippo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_tag_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_mpe-13"
+  },
+  {
+    "algorithm": "ippo_rnn_nps_het",
+    "config": "ippo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_tag_v3",
+      "LR=0.0001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_mpe-14"
+  },
+  {
+    "algorithm": "mappo_ff_nps_het",
+    "config": "mappo_ff_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_tag_v3",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_mpe-15"
+  },
+  {
+    "algorithm": "mappo_rnn_nps_het",
+    "config": "mappo_rnn_mpe",
+    "overrides": [
+      "ENV_NAME=MPE_simple_tag_v3",
+      "LR=0.0001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_mpe-16"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=asymm_advantages",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v1-17"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=asymm_advantages",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v1-18"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=coord_ring",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v1-19"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=coord_ring",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v1-20"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=counter_circuit",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v1-21"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=counter_circuit",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v1-22"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=cramped_room",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v1-23"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=cramped_room",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v1-24"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=forced_coord",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v1-25"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v1",
+    "overrides": [
+      "ENV_KWARGS.layout=forced_coord",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v1-26"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=asymm_advantages",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-27"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=asymm_advantages",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-28"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=asymm_advantages",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-29"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=asymm_advantages",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-30"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=coord_ring",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-31"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=coord_ring",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-32"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=coord_ring",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-33"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=coord_ring",
+      "LR=0.0004",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-34"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=counter_circuit",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-35"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=counter_circuit",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-36"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=counter_circuit",
+      "LR=0.0004",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-37"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=counter_circuit",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-38"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=cramped_room",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-39"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=cramped_room",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-40"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=cramped_room",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-41"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=cramped_room",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-42"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=forced_coord",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-43"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=forced_coord",
+      "LR=0.0004",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-44"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=forced_coord",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-45"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=forced_coord",
+      "LR=0.0001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=5000000",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-46"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-47"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-48"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_simple",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-49"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_simple",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-50"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_wide",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-51"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_wide",
+      "LR=0.0003",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-52"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_wide",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-53"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=demo_cook_wide",
+      "LR=0.0004",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-54"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_ring",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-55"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_ring",
+      "LR=0.0001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-56"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_ring",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-57"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_ring",
+      "LR=0.0004",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-58"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-59"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-60"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-61"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=grounded_coord_simple",
+      "LR=0.0004",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-62"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-63"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-64"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-65"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_simple",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-66"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_wide",
+      "LR=0.001",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_overcooked_v2-67"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_wide",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_overcooked_v2-68"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_wide",
+      "LR=0.0005",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_overcooked_v2-69"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_overcooked_v2",
+    "overrides": [
+      "ENV_KWARGS.layout=test_time_wide",
+      "LR=0.0003",
+      "CLIP_EPS=0.2",
+      "UPDATE_EPOCHS=4",
+      "REW_SHAPING_HORIZON=1.5e7",
+      "TOTAL_TIMESTEPS=3e7",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_overcooked_v2-70"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=3m",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-01"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=2s3z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-02"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=3s5z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-03"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=3s_vs_5z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-04"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=3s5z_vs_3s6z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-05"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=8m",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-06"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=6h_vs_8z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-07"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=10m_vs_11m",
+      "LR=0.0001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-08"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=5m_vs_6m",
+      "LR=0.0001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-71-09"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=3m,2s3z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-72"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=3s5z,5m_vs_6m,3s5z_vs_3s6z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-73"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=3s_vs_5z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-74"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=8m",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-75"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=10m_vs_11m",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-76"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=6h_vs_8z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-77"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_smax",
+    "overrides": [
+      "MAP_NAME=3m,2s3z,3s5z,3s_vs_5z,3s5z_vs_3s6z,5m_vs_6m",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_smax-78"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_smax",
+    "overrides": [
+      "MAP_NAME=8m,6h_vs_8z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_smax-79"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_smax",
+    "overrides": [
+      "MAP_NAME=10m_vs_11m",
+      "LR=0.0001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_smax-80"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=3m,2s3z,5m_vs_6m,3s5z_vs_3s6z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-81"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=3s5z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-82"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=3s_vs_5z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-83"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=8m",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-84"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=10m_vs_11m",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-85"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=6h_vs_8z",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-86"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_5_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-87-01"
+  },
+  {
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_10_units,smacv2_20_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_ff_smax-87-02"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_5_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-88-01"
+  },
+  {
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_10_units,smacv2_20_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "ippo_rnn_smax-88-02"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_5_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_smax-89-01"
+  },
+  {
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_10_units,smacv2_20_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_ff_smax-89-02"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_5_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-90-01"
+  },
+  {
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_smax",
+    "overrides": [
+      "MAP_NAME=smacv2_10_units,smacv2_20_units",
+      "LR=0.001",
+      "CLIP_EPS=0.1",
+      "UPDATE_EPOCHS=4",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "name": "mappo_rnn_smax-90-02"
+  },
+  {
+    "name": "ippo_ff_hanabi",
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_hanabi",
+    "overrides": [
+      "ENV_NAME=hanabi",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_rnn_hanabi",
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_hanabi",
+    "overrides": [
+      "ENV_NAME=hanabi",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_ff_hanabi",
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_hanabi",
+    "overrides": [
+      "ENV_NAME=hanabi",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_rnn_hanabi",
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_hanabi",
+    "overrides": [
+      "ENV_NAME=hanabi",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_ff_ant_4x2",
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=ant_4x2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_ff_halfcheetah_6x1",
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=halfcheetah_6x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_ff_hopper_3x1",
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=hopper_3x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_ff_humanoid_9|8",
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=humanoid_9|8",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=max"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_ff_walker2d_2x3",
+    "algorithm": "ippo_ff_nps",
+    "config": "ippo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=walker2d_2x3",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_rnn_ant_4x2",
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=ant_4x2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_rnn_halfcheetah_6x1",
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=halfcheetah_6x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_rnn_hopper_3x1",
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=hopper_3x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_rnn_humanoid_9|8",
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=humanoid_9|8",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=max"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "ippo_rnn_walker2d_2x3",
+    "algorithm": "ippo_rnn_nps",
+    "config": "ippo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=walker2d_2x3",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_ff_ant_4x2",
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=ant_4x2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_ff_halfcheetah_6x1",
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=halfcheetah_6x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_ff_hopper_3x1",
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=hopper_3x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_ff_humanoid_9|8",
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=humanoid_9|8",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=max"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_ff_walker2d_2x3",
+    "algorithm": "mappo_ff_nps",
+    "config": "mappo_ff_mabrax",
+    "overrides": [
+      "ENV_NAME=walker2d_2x3",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_rnn_ant_4x2",
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=ant_4x2",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_rnn_halfcheetah_6x1",
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=halfcheetah_6x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_rnn_hopper_3x1",
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=hopper_3x1",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=pad"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_rnn_humanoid_9|8",
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=humanoid_9|8",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=max"
+    ],
+    "settings": "paper_defaults"
+  },
+  {
+    "name": "mappo_rnn_walker2d_2x3",
+    "algorithm": "mappo_rnn_nps",
+    "config": "mappo_rnn_mabrax",
+    "overrides": [
+      "ENV_NAME=walker2d_2x3",
+      "SEED=30,31,32,33,34,35,36,37,38,39",
+      "TEST_DURING_TRAINING=True",
+      "ENV_KWARGS.homogenisation_method=null"
+    ],
+    "settings": "paper_defaults"
+  }
+]

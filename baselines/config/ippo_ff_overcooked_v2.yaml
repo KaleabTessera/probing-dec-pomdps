@@ -1,0 +1,38 @@
+ALG: IPPO_FF_NoPS
+
+"LR": 0.0005
+"LR_WARMUP": 0.05
+
+"NUM_ENVS": 128
+"NUM_STEPS": 256
+"GRU_HIDDEN_DIM": 128
+"TOTAL_TIMESTEPS": 10000000
+FC_DIM_SIZE: 128
+"UPDATE_EPOCHS": 4
+"NUM_MINIBATCHES": 64
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": 0.2
+SCALE_CLIP_EPS: False
+"ENT_COEF": 0.01
+"VF_COEF": 0.5
+"MAX_GRAD_NORM": 0.25
+"ACTIVATION": "relu"
+"SEED": 30
+"REW_SHAPING_HORIZON": 5000000
+
+"ENV_NAME": "overcooked_v2"
+"ENV_KWARGS":
+  "layout" : "grounded_coord_simple"
+  "agent_view_size": 2
+  "negative_rewards": True
+  "sample_recipe_on_delivery": True
+  "random_agent_positions": True
+
+"ANNEAL_LR": True
+"DISABLE_JIT": False
+
+"TEST_DURING_TRAINING": False
+"TEST_INTERVAL": 0.05 # Fraction of training updates between evaluations.
+"TEST_NUM_STEPS": 400
+"TEST_NUM_ENVS": 32 # Parallel evaluation environments.
