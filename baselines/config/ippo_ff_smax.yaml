@@ -1,0 +1,31 @@
+ALG: IPPO_FF_NoPS
+
+"LR": 0.004
+"NUM_ENVS": 128
+"NUM_STEPS": 128
+"TOTAL_TIMESTEPS": 1e7
+FC_DIM_SIZE: 128
+"UPDATE_EPOCHS": 4
+"NUM_MINIBATCHES": 4
+"GAMMA": 0.99
+"GAE_LAMBDA": 0.95
+"CLIP_EPS": 0.2
+SCALE_CLIP_EPS: False
+"ENT_COEF": 0.0
+"VF_COEF": 0.5
+"MAX_GRAD_NORM": 0.5
+"ACTIVATION": "relu"
+"SEED": 30
+"ENV_NAME": "HeuristicEnemySMAX"
+"MAP_NAME": "smacv2_5_units"
+"ENV_KWARGS":
+  "see_enemy_actions": True
+  "walls_cause_death": True
+  "attack_mode": "closest"
+"ANNEAL_LR": True
+"DISABLE_JIT": False
+
+"TEST_DURING_TRAINING": False
+"TEST_INTERVAL": 0.05 # Fraction of training updates between evaluations.
+"TEST_NUM_STEPS": 128
+"TEST_NUM_ENVS": 32 # Parallel evaluation environments.

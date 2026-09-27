@@ -16,7 +16,7 @@
 
 Metrics introduced in [Probing Dec-POMDP Reasoning in Cooperative MARL](https://arxiv.org/abs/2602.20804) (**Oral, AAMAS 2026**).
 
-This repository provides information-theoretic diagnostics for cooperative MARL trajectories. Given trained-policy rollouts, the package computes five probes, compares them against permutation nulls, and helps audit what behaviours are induced under the policy distribution rather than relying only on return.
+This repository contains information-theoretic diagnostics for cooperative MARL and IPPO/MAPPO baselines for generating rollout data. The diagnostics compute five probes from trained-policy rollouts and compare them against permutation nulls to examine memory use, private information, and coordination.
 
 Use it when you want to ask:
 
@@ -24,7 +24,7 @@ Use it when you want to ask:
 - Does one agent carry private information that predicts another agent's action?
 - Is coordination mostly synchronous action coupling, or is there temporal influence across agents?
 
-Quick links: [Installation](#installation) | [Quickstart](#quickstart) | [CLI](#cli-reference) | [Citation](#citation)
+Quick links: [Installation](#installation) | [Quickstart](#quickstart) | [Baselines](baselines/README.md) | [CLI](#cli-reference) | [Citation](#citation)
 
 ## Installation
 
@@ -50,6 +50,23 @@ Install test/development extras:
 pip install -e ".[dev]"
 pytest
 ```
+
+## Generate data with the baselines
+
+The [`baselines/`](baselines/README.md) package trains IPPO and MAPPO policies
+and collects data for `dec-pomdp-metrics`. It supports MPE, SMAX, Overcooked V1/V2,
+Hanabi, and MaBrax.
+
+Install the dependencies in the [baseline guide](baselines/README.md#install),
+then run:
+
+```bash
+JAX_PLATFORMS=cpu python -m baselines.smoke --output outputs/smoke --steps 1024
+```
+
+This trains all eight variants on MPE, reloads their checkpoints, collects
+rollouts, and computes all five diagnostics. The guide includes Hanabi and
+MaBrax checks, training commands, and experiment settings.
 
 ## Quickstart
 

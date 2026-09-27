@@ -7,7 +7,6 @@ import dec_pomdp_diagnostics as dpd
 from dec_pomdp_diagnostics.data import permute_actions
 from dec_pomdp_diagnostics.metrics import compute_dai_oa_hist
 
-
 # ----------------------------------------------------------------------
 # Permutation null
 # ----------------------------------------------------------------------
